@@ -1,0 +1,104 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+
+  body {
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0, #ffe18d, #ff9a9e);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+
+  .feedback-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid #ccc;
+  }
+  
+
+  .feedback-form label {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #333;
+    font-size: 16px;
+  }
+  
+
+  .feedback-form input[type="email"],
+  .feedback-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 17px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+  }
+  
+  .feedback-form input[type="email"]:focus,
+  .feedback-form textarea:focus {
+    border-color: #6a5acd;
+    outline: none;
+  }
+  
+
+  .feedback-form button[type="submit"] {
+    width: 100%;
+    padding: 14px 0;
+    background-color: #6a5acd;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .feedback-form button[type="submit"]:hover {
+    background-color: #66CC66;
+    transform: scale(1.05);
+  }
+  
+
+  @media (max-width: 480px) {
+    .feedback-form {
+      padding: 25px;
+    }
+    
+    .feedback-form label {
+      margin-bottom: 15px;
+    }
+  
+    .feedback-form input[type="email"],
+    .feedback-form textarea {
+      font-size: 16px;
+      padding: 12px;
+    }
+  
+    .feedback-form button[type="submit"] {
+      font-size: 16px;
+    }
+  }
