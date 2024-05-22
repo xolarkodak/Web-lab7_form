@@ -6,12 +6,12 @@ const emailInput = form.elements.email;
 const messageInput = form.elements.message;
 
 
-function saveToLocalStorage() {
+function save_s() {
   localStorage.setItem('feedback-form-state', JSON.stringify(formData));
 }
 
 
-function loadFromLocalStorage() {
+function load_s() {
   const savedData = localStorage.getItem('feedback-form-state');
   if (savedData) {
     formData = JSON.parse(savedData);
@@ -21,13 +21,13 @@ function loadFromLocalStorage() {
 }
 
 
-function handleInput(event) {
+function handle_input(event) {
   formData[event.target.name] = event.target.value.trim();
-  saveToLocalStorage();
+  save_s();
 }
 
 
-function handleSubmit(event) {
+function handle_submit(event) {
   event.preventDefault();
   if (!formData.email || !formData.message) {
     alert('Заповніть, будь ласка, всі поля');
@@ -39,7 +39,7 @@ function handleSubmit(event) {
   form.reset();
 }
 
-window.addEventListener('DOMContentLoaded', loadFromLocalStorage);
+window.addEventListener('DOMContentLoaded', load_s);
 
-form.addEventListener('input', handleInput);
-form.addEventListener('submit', handleSubmit);
+form.addEventListener('input', handle_input);
+form.addEventListener('submit', handle_submit);
